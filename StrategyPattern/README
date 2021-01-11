@@ -9,7 +9,7 @@ STRATEGY PATTERN
 Tips:
 
     - Create interface in order to be impemented for each strategy
-    - The object that HAS the strategy can implement a setter for change dynamically th estrategy.
+    - The object that HAS the strategy can implement a setter for change dynamically th strategy.
 
 
 Example Implementation
