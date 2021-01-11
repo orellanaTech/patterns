@@ -1,20 +1,20 @@
 package display;
 
 import observer.PullObserver;
-import subject.WeatherPullSubject;
+import subject.PullSubject;
 
 public class PressureDisplay implements PullObserver, DisplayElement {
 
-    private WeatherPullSubject weatherPullSubject;
+    private PullSubject pullSubject;
 
-    public PressureDisplay(WeatherPullSubject weatherPullSubject){
-        this.weatherPullSubject = weatherPullSubject;
-        this.weatherPullSubject.addObserver(this);
+    public PressureDisplay(PullSubject weatherPullSubject){
+        this.pullSubject = weatherPullSubject;
+        this.pullSubject.addObserver(this);
     }
 
     @Override
     public void display() {
-        System.out.println("Pressure is: "  + this.weatherPullSubject.getPressure());
+        System.out.println("Pressure is: "  + this.pullSubject.getPressure());
     }
 
     @Override

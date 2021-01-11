@@ -1,1 +1,20 @@
+OBSERVER PATTERN
+
+    Defines a one-to-many relation between objects so when an object changes hsi state,
+    all its dependents objects are notified and updated automatically
+
+Tips
+
+    - Subjects implements an interface in order to update Observers.
+    - Observers are loosely coupled in that the Subject knows nothing about them,
+      other than that they implement the Observer interface.
+    - You can push or pull data from the Observable when using the pattern (pull is
+      considered more “correct”).
+    - Don’t depend on a specific order of notification for your Observers.
+
+Example Implementation
+
+    In the example there are the two types of notification, pull or push.
+    With pull subject the observer have access to the data.
+    With push subject the subject send the data with the notification;
 

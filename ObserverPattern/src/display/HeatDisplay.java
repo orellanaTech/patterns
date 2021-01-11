@@ -1,20 +1,20 @@
 package display;
 
 import observer.PullObserver;
-import subject.WeatherPullSubject;
+import subject.PullSubject;
 
 public class HeatDisplay implements PullObserver, DisplayElement {
 
-    private WeatherPullSubject weatherPullSubject;
+    private PullSubject pullSubject;
 
-    public HeatDisplay(WeatherPullSubject weatherPullSubject){
-        this.weatherPullSubject = weatherPullSubject;
-        this.weatherPullSubject.addObserver(this);
+    public HeatDisplay(PullSubject weatherPullSubject){
+        this.pullSubject = weatherPullSubject;
+        this.pullSubject.addObserver(this);
     }
 
     @Override
     public void display() {
-        System.out.println("Heat is: "  + this.weatherPullSubject.getTemperature());
+        System.out.println("Heat is: "  + this.pullSubject.getTemperature());
     }
 
     @Override

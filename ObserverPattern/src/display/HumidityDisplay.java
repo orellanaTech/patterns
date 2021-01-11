@@ -1,20 +1,20 @@
 package display;
 
 import observer.PullObserver;
-import subject.WeatherPullSubject;
+import subject.PullSubject;
 
 public class HumidityDisplay implements PullObserver, DisplayElement {
 
-    private WeatherPullSubject weatherPullSubject;
+    private PullSubject pullSubject;
 
-    public HumidityDisplay(WeatherPullSubject weatherPullSubject){
-        this.weatherPullSubject = weatherPullSubject;
-        this.weatherPullSubject.addObserver(this);
+    public HumidityDisplay(PullSubject weatherPullSubject){
+        this.pullSubject = weatherPullSubject;
+        this.pullSubject.addObserver(this);
     }
 
     @Override
     public void display() {
-        System.out.println("Humidity is: "  + this.weatherPullSubject.getHumidity());
+        System.out.println("Humidity is: "  + this.pullSubject.getHumidity());
     }
 
     @Override
