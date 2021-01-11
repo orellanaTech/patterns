@@ -16,3 +16,4 @@ Example Implementation
 
     FlyBehavior is the interface for implement the differents flying startegies.
     QuakBehavior is the interface for implement the differents quaking startegies.
+    Duck HAS the fl ystartegy and quak startegy thet we put into the constructor when we initialize.
