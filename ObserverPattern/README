@@ -16,5 +16,5 @@ Example Implementation
 
     In the example there are the two types of notification, pull or push.
     With pull subject the observer have access to the data.
-    With push subject the subject send the data with the notification;
+    With push subject the subject send the data with the notification.
 
