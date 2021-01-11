@@ -1,1 +1,18 @@
 
+STRATEGY PATTERN
+
+    The Strategy Pattern defines a family of algorithms,
+    encapsulates each one, and makes them interchangeable. Strategy
+    lets the algorithm vary independently from clients that use it.
+
+
+Tips:
+
+    - Create interface in order to be impemented for each strategy
+    - The object that HAS the strategy can implement a setter for change dynamically th estrategy.
+
+
+Example Implementation
+
+    FlyBehavior is the interface for implement the differents flying startegies.
+    QuakBehavior is the interface for implement the differents quaking startegies.
