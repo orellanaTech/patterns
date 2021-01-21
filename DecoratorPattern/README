@@ -1,0 +1,5 @@
+Decorator Pattern
+
+    Attach additional responsabilities to an object dynamically.
+
+    Decorator pattern give a flexible alternative for subclasing extending functionalities
