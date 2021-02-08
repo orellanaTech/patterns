@@ -10,3 +10,7 @@ FACTORY PATTERN
         (NYPizzaStore and ChicagoPizzaStore create pizza method in the example)
 
 
+    Abstract Factory
+
+        Have an interface for create objects , letting to the subclass decide wich objects to instantiate.
+        Have more decouple between the class that creates the objects to the obejcts to be created.
