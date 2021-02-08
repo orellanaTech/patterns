@@ -1,0 +1,6 @@
+SINGLETON PATTERN
+
+    With singleton pattern we can ensure that only one instance of an object will be created
+
+    Could be some multithread problems tha can be solved making getInstance() synchronized or
+    instantiating the singleton on his attribute (at application startup)
