@@ -1,0 +1,9 @@
+Command Pattern
+
+    Encapsulate a request as an object
+
+    Can implement undo operations
+
+    CAn implement macroCOmmands that execute many commands at once
+
+    Can be implemented with lambda expression in order to have a lower quantity of classes
