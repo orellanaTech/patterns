@@ -18,18 +18,18 @@ public class CommandPattern {
 //        simpleRemoteControl.buttonPressed();
 
         //Multiple RemoteCOntrol
-//
-//        RemoteControl remoteControl = new RemoteControl();
-//        Light light = new Light();
-//        Stereo stereo = new Stereo();
-//        GarageDoor garageDoor = new GarageDoor();
-//
-//        remoteControl.setCommand(0, new LightOnCommand(light), new LightOffCommand(light));
-//        remoteControl.setCommand(1, new OpenGarageDoor(garageDoor), new CloseGarageDoor(garageDoor));
-//        remoteControl.setCommand(2, new OnStereoWithCd(stereo), new OffStereo(stereo));
-//        remoteControl.setCommand(3, new UpStereoVolume(stereo), new DownStereoVolume(stereo));
-//
-//        System.out.println(remoteControl.toString());
+
+        RemoteControl remoteControl = new RemoteControl();
+        Light light = new Light();
+        Stereo stereo = new Stereo();
+        GarageDoor garageDoor = new GarageDoor();
+
+        remoteControl.setCommand(0, new LightOnCommand(light), new LightOffCommand(light));
+        remoteControl.setCommand(1, new OpenGarageDoor(garageDoor), new CloseGarageDoor(garageDoor));
+        remoteControl.setCommand(2, new OnStereoWithCd(stereo), new OffStereo(stereo));
+        remoteControl.setCommand(3, new UpStereoVolume(stereo), new DownStereoVolume(stereo));
+
+        System.out.println(remoteControl.toString());
 //
 //        remoteControl.onButtonPressed(0);
 //        remoteControl.onButtonPressed(1);
@@ -42,22 +42,30 @@ public class CommandPattern {
 //        remoteControl.offButtonPressed(3);
 //        remoteControl.offButtonPressed(2);
 
+        //WITH lambda expression
+
+
+
         //Commands with undo
 
-        Fan fan = new Fan();
-        FanRemoteControl fanRemoteControl = new FanRemoteControl(fan);
+        remoteControl.setCommand(4, light::on, light::off);
+        remoteControl.onButtonPressed(4);
+        remoteControl.offButtonPressed(4);
 
-        fanRemoteControl.pressOnButton();
-        fanRemoteControl.pressUpSpeedButton();
-        fanRemoteControl.pressUpSpeedButton();
-        fanRemoteControl.pressUndoButton();
-        System.out.println("----");
-        fanRemoteControl.pressDOwnSpeedButton();
-        fanRemoteControl.pressUndoButton();
-        fanRemoteControl.pressOffButton();
-        fanRemoteControl.pressUndoButton();
-        System.out.println("----");
-        fanRemoteControl.pressOnButton();
-        fanRemoteControl.pressUndoButton();
+//        Fan fan = new Fan();
+//        FanRemoteControl fanRemoteControl = new FanRemoteControl(fan);
+//
+//        fanRemoteControl.pressOnButton();
+//        fanRemoteControl.pressUpSpeedButton();
+//        fanRemoteControl.pressUpSpeedButton();
+//        fanRemoteControl.pressUndoButton();
+//        System.out.println("----");
+//        fanRemoteControl.pressDOwnSpeedButton();
+//        fanRemoteControl.pressUndoButton();
+//        fanRemoteControl.pressOffButton();
+//        fanRemoteControl.pressUndoButton();
+//        System.out.println("----");
+//        fanRemoteControl.pressOnButton();
+//        fanRemoteControl.pressUndoButton();
     }
 }
